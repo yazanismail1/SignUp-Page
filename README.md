@@ -1,6 +1,6 @@
 # Sign Up Concept Landing Page
 
-Deployed Site: [Sign Up Page](www.google.com)
+Deployed Site: [Sign Up Page](https://regal-kringle-89724d.netlify.app/)
 
 ---
 
