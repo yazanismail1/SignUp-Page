@@ -4,8 +4,25 @@ import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Login.css";
 import Button from "react-bootstrap/Button";
+import {createRef} from "react";
+
 
 class LogIn extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.dataCapture = createRef({});
+  }
+
+  gettingInfo = (e) => {
+    e.preventDefault();
+    this.dataCapture.current = {
+      "email" : e.target.userEmail.value,
+      "password" : e.target.userPassword.value
+    }
+    console.log(this.dataCapture.current);
+  };
+
   render() {
     return (
       <section className="login">
@@ -15,7 +32,7 @@ class LogIn extends React.Component {
           alt="user-logo"
         />
         </div>
-        <form>
+        <Form onSubmit={this.gettingInfo}>
           <FloatingLabel
             controlId="floatingInput"
             label="Email address"
@@ -25,6 +42,8 @@ class LogIn extends React.Component {
               className="form input"
               type="email"
               placeholder="name@example.com"
+              ref={this.dataCapture}
+              id="userEmail"
             />
           </FloatingLabel>
           <FloatingLabel
@@ -36,10 +55,12 @@ class LogIn extends React.Component {
               className="input"
               type="password"
               placeholder="Password"
+              ref={this.dataCapture}
+              id="userPassword"
             />
           </FloatingLabel>
           <div className="d-grid gap-2 loginButton">
-            <Button className="form btn btn-1" size="lg">
+            <Button className="form btn btn-1" size="lg" type="submit">
               Log In
             </Button>
           </div>
@@ -61,7 +82,7 @@ class LogIn extends React.Component {
             </Button>
           </div>
           <div className="backgroundDiv"></div>
-        </form>
+        </Form>
       </section>
     );
   }
