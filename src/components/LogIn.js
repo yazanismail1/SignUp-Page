@@ -21,6 +21,8 @@ class LogIn extends React.Component {
       "password" : e.target.userPassword.value
     }
     console.log(this.dataCapture.current);
+    e.target.reset()
+
   };
 
   render() {
