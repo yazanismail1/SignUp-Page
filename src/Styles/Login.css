@@ -9,17 +9,19 @@ section {
     padding: 4%;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+}
+
 img {
-    position: absolute;
-    top : 10%;
-    left : 38%;
     width: 100px;
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
 
 form {
-    margin-top: 40%;
+    margin-top: 10%;
 }
 
 .form {
@@ -73,4 +75,26 @@ form {
 
 .btn, .input {
     border-radius: 0px;
+}
+
+.btn-1 {
+    background-color: #002B5B;
+    border: #002B5B;
+}
+
+.btn-1:hover {
+    background-color: #2B4865;
+    border: #2B4865;
+    color: #8FE3CF;
+}
+
+.btn-2 {
+    background-color: #256D85;
+    border: #256D85;
+}
+
+.btn-2:hover {
+    background-color: #2B4865;
+    border: #2B4865;
+    color: #8FE3CF;
 }
